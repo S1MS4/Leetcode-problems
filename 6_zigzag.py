@@ -10,4 +10,4 @@ class Solution:
             curr += 1 if going_down else -1
         return ''.join(rows)
 #example usage:
-print(Solution().convert("PAYPALISHIRING", 3))  # Output: ['PAHN', 'APLSIIG', 'YIR']
+#print(Solution().convert("PAYPALISHIRING", 3))
