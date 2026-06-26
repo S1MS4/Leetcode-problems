@@ -24,9 +24,9 @@ class Solution:
                 sum_list = sum_list.next
         return result_head
     
-# example usage:
-add = Solution()
-result = add.addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
-while result:
-    print(result.val, end=" -> ")
-    result = result.next
+# # example usage:
+# add = Solution()
+# result = add.addTwoNumbers(ListNode(2, ListNode(4, ListNode(3))), ListNode(5, ListNode(6, ListNode(4))))
+# while result:
+#     print(result.val, end=" -> ")
+#     result = result.next
