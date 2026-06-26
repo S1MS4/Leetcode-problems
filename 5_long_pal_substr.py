@@ -2,12 +2,23 @@ class Solution:
     def longestPalindrome(self, s: str) -> str:
         longest = ""
         for i in range(len(s)):
-            for j in range(i, len(s)):
-                substring = s[i:j + 1]
-                if substring == substring[::-1] and len(substring) > len(longest):
-                    longest = substring
+            # Odd length palindromes
+            left, right = i, i
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                if (right - left + 1) > len(longest):
+                    longest = s[left:right + 1]
+                left -= 1
+                right += 1
+
+            # Even length palindromes
+            left, right = i, i + 1
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                if (right - left + 1) > len(longest):
+                    longest = s[left:right + 1]
+                left -= 1
+                right += 1
         return longest
     
 #example usage:
 result = Solution()
-print(result.longestPalindrome("babada"))  # Output: "bab" or "aba
+print(result.longestPalindrome("ababada"))  # Output: "bab" or "aba
